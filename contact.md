@@ -5,7 +5,7 @@ subtitle: Let's get connected
 css: "/css/aboutme.css"
 ---
 
-<form action="https://formspree.io/rishabhg1997@gmail.com" method="POST" class="form" id="contact-form">
+<form action="https://formspree.io/haowen470@hotmail.com" method="POST" class="form" id="contact-form">
   <p>Leave me a message:</p>
   <div class="row">
     <div class="col-xs-6">
