@@ -1,2 +1,4 @@
-# mr-easy.github.io
-My website
+# Personal Website
+My personal website hosted on GitHub.
+
+Theme taken from <a href="https://deanattali.com/beautiful-jekyll/">beautiful jekyll</a>.

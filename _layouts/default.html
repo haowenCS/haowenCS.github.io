@@ -1,47 +1,25 @@
-<!DOCTYPE html>
-	<html>
-		<head>
-			<meta charset="utf-8">
-			<meta name="viewport" width="device-width, initial-scale=1.0">
-			<span itemscope itemtype ="http://schema.org/Person">
-			    <meta name="author" content="Rishabh Gupta" itemprop="name">
-			    <meta content="rishabhg1997@gmail.com" itemprop="email">
-			    <meta content="mr easy" itemprop="additionalName">
-			    <meta content="Indian Institute of Science" itemprop="affiliation">
-			    <meta content="Guru Ghasidas University" itemprop="alumniOf">
-			    <meta content="Kendriya Vidyalaya Noida" itemprop="alumniOf">
-			</span>
-			<meta name="description" content="Rishabh Gupta personal website. Indian Institute of Science, IISc, Bangalore. Computer Scienc and Automation. {{ page.description }}">
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			<!-- Add icon library -->
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-			{% seo %}
-			{% include analytics.html %}
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/projects">Things I do</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-				<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">Résumé</a></li>
-				
-	    		</ul>
-			</nav>
-			<div class="container">
+---
+layout: base
+---
 
-			{{ content }}
+<div class="intro-header"></div>
 
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:rishabhg1997@gmail.com">email me</a></li>
-	        		<li><a href="https://github.com/mr-easy">Github</a></li>
-				<li><a href="https://www.linkedin.com/in/rishabhgupta1997/">LinkedIn</a></li>
-			</ul>
-			</footer>
-		</body>
-	</html>
+<div role="main" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+  {% if page.before-content %}
+    <div class="before-content">
+      {% for file in page.before-content %}
+        {% include {{ file }} %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {{ content }}
+
+  {% if page.after-content %}
+    <div class="after-content">
+      {% for file in page.after-content %}
+        {% include {{ file }} %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
