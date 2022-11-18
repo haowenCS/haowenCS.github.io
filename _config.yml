@@ -25,9 +25,7 @@ author: Hao Wen
 navbar-links:
   Home: "/"
   Blog: "blog/"
-  Projects:
-    - Particle Filter: "projects/pf/"
-    - Bayesian Optimization: "projects/bo/"
+  Projects: "projects/"
   About Me: "aboutme/"
 
 
